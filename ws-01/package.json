@@ -19,6 +19,7 @@
 		"@fils/math": "^0.1.0",
 		"@fils/scroller": "^1.0.1",
 		"@fils/utils": "^0.1.1",
+		"gsap": "./gsap-bonus.tgz",
 		"three": "^0.169.0"
 	},
 	"devDependencies": {
