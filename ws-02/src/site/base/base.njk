@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	{% include 'head.njk' %}
+
+	<body>
+        <div class="view"></div>
+
+        <main>
+            <div nomad-wrapper>
+                <div nomad-template="{{ pageTemplate }}">
+                    {% block content %}
+                        {{ content | safe }}
+                    {% endblock %}
+                </div>
+            </div>
+            {# {{ content | safe }} #}
+        </main>
+
+        <script defer type="module">
+            const src = "/bundle/main.js";
+            import(src).then(module => {});
+        </script>
+	</body>
+</html>
