@@ -1,0 +1,71 @@
+---
+layout: base
+pageTemplate: landing
+eleventyComputed:
+  title: "{{ staticData.title }}"
+  description: "{{ staticData.description }}"
+---
+
+<div fil-scroller> 
+  <div fil-scroller-content>
+    <div fil-scroller-section="hello" fil-scroller-expose>
+      <h1 class="title">Hello Scroller Hello Scroller Hello Scroller</h1>
+    </div>
+
+    <div fil-scroller-section="o" fil-scroller-expose>
+      <h1 class="title">O</h1>
+    </div>
+
+    <div fil-scroller-section="dolor" fil-scroller-expose>
+      <nav fil-scroller-sticky>
+        <span></span>
+      </nav>
+      <div class="description">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean feugiat consequat dictum. Morbi lobortis felis est, vitae bibendum tellus scelerisque eu. Proin consequat mi et ex posuere rhoncus. Nam consectetur pellentesque erat. Integer maximus felis porta nulla mattis dignissim. Aenean accumsan viverra purus, in luctus nulla vehicula hendrerit. Aenean egestas tempor dapibus. Etiam in vestibulum lacus. Nulla in dui arcu. Duis lobortis sapien ut risus dignissim, in dapibus ex tempor. Ut commodo condimentum pharetra. Sed aliquam convallis ligula, eget euismod orci eleifend vestibulum. Donec laoreet neque augue, nec maximus lorem blandit vel. Duis tempus justo et ante hendrerit, eu interdum diam volutpat. Praesent porta, erat sit amet blandit fermentum, mi risus rutrum enim, sed interdum metus massa et nibh.</p>
+        <p>Integer aliquam a ligula eu luctus. Phasellus varius sodales ante, consectetur pulvinar tortor tincidunt quis. Sed est nunc, porttitor quis metus sit amet, convallis sagittis dolor. Curabitur et tempus augue, sed blandit augue. Duis eget ornare eros. Aenean et velit velit. Vivamus sed gravida elit, hendrerit scelerisque mauris. Nunc massa turpis, bibendum quis nisl in, hendrerit varius tortor. Curabitur blandit accumsan velit, sed sollicitudin tellus congue in. Fusce vitae quam ac libero rhoncus rutrum. Ut auctor, sapien nec venenatis maximus, velit mi feugiat nulla, vitae gravida orci nunc et lectus. In arcu elit, sagittis eu sapien in, ultrices tincidunt orci.</p>
+        <p>Cras vestibulum nulla magna, vel sodales mi volutpat a. Cras blandit massa eu diam auctor, eget congue velit pretium. Pellentesque et elementum eros. Nullam elementum nisl at metus aliquam efficitur. Praesent in iaculis leo. Donec iaculis id risus malesuada finibus. Fusce aliquam purus nec massa sodales, ac pulvinar lacus varius. Pellentesque sollicitudin ornare nisi, vitae gravida magna tempus eget. Praesent consequat purus vitae enim pretium viverra.</p>
+        <p>Proin malesuada lacinia ipsum, in euismod leo facilisis quis. Mauris fermentum, ante condimentum efficitur lacinia, orci neque consequat sem, sed condimentum velit mi ut lorem. Integer semper sem non purus scelerisque faucibus. Integer pretium tempus consectetur. Cras semper interdum pellentesque. Etiam nec ullamcorper felis. Ut non mi convallis, pretium nibh ac, scelerisque magna. Proin ornare velit nisi, at aliquam ipsum feugiat vitae. Nulla mi magna, semper malesuada luctus eget, mattis ac quam. Mauris id turpis id ex rutrum pretium vel id enim. Etiam arcu eros, scelerisque non viverra et, commodo nec nulla. Vivamus facilisis, massa vitae dignissim molestie, urna metus dapibus leo, sodales cursus mi ex nec ante. Maecenas sit amet sagittis ipsum. Fusce vel rutrum ante. Nunc in libero commodo, feugiat lorem vitae, maximus dolor. Praesent suscipit luctus tempus.</p>
+        <p>Phasellus malesuada velit at felis posuere, quis tempor neque vehicula. Sed condimentum quam volutpat turpis malesuada efficitur. Sed blandit nec justo ut sodales. Sed sed imperdiet orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean bibendum viverra dapibus. Integer semper odio eget nunc vulputate congue. Aliquam erat volutpat. Suspendisse consequat ligula vel quam congue, at feugiat lectus porta. Suspendisse eu gravida augue. Integer ac nibh neque. Praesent a purus quis quam tristique ornare.</p>
+      </div>
+    </div>
+
+    <div fil-scroller-section="gallery">
+      <ul class="gallery-list">
+
+        {% for i in range(0, 6) -%}
+          <li class="gallery-item">
+            <div class="gallery_card">
+              <div class="gallery_card-img"></div>
+            </div>
+          </li>
+        {%- endfor %}
+
+      </ul>
+    </div>
+
+    <div fil-scroller-section="og" fil-scroller-expose>
+      <svg viewBox="0 0 137 119" xmlns="http://www.w3.org/2000/svg" class="og">
+        <path d="M120.348 11.8725C118.351 11.8725 116.903 13.9195 116.004 18.0135C118.6 20.0106 120.597 22.457 121.995 25.3528C123.393 28.1486 124.092 31.294 124.092 34.7889C124.092 40.181 122.445 44.8242 119.15 48.7184C115.954 52.5129 111.661 54.9593 106.269 56.0577C105.07 56.3572 103.872 56.507 102.674 56.507C97.4814 57.4057 93.4373 58.6538 90.5416 60.2515C87.7457 61.8491 86.3478 63.6465 86.3478 65.6436C86.3478 67.0415 86.7971 68.2398 87.6958 69.2383C88.5945 70.137 90.292 71.0357 92.7883 71.9343C95.2846 72.7332 99.0291 73.5819 104.022 74.4806C112.509 76.0783 118.55 78.325 122.145 81.2207C125.74 84.1164 127.537 88.2104 127.537 93.5027C127.537 97.4968 126.239 101.092 123.643 104.287C121.047 107.582 117.452 110.128 112.859 111.926C108.266 113.823 103.123 114.771 97.4315 114.771C89.1437 114.771 82.7031 113.274 78.1099 110.278C73.6165 107.382 71.3698 103.288 71.3698 97.9961C71.3698 94.3015 72.8176 90.8565 75.7134 87.6612C78.709 84.5658 82.7031 82.2192 87.6958 80.6216C84.2009 79.2236 81.6546 77.6759 80.057 75.9784C78.5592 74.181 77.8103 72.0841 77.8103 69.6876C77.8103 66.8917 79.4579 64.3455 82.753 62.0489C86.148 59.7522 90.9909 57.9049 97.2817 56.507C91.0908 55.9079 86.0482 53.6113 82.1539 49.6171C78.3595 45.623 76.4623 40.6303 76.4623 34.6391C76.4623 28.2485 78.659 23.0561 83.0526 19.062C87.546 14.968 93.2876 12.921 100.277 12.921C105.869 12.921 110.712 14.269 114.806 16.9651C117.302 8.37768 121.147 4.08398 126.339 4.08398C128.236 4.08398 129.734 4.63318 130.832 5.73156C131.931 6.7301 132.48 8.07812 132.48 9.77563C132.48 11.1736 131.981 12.3718 130.982 13.3703C129.984 14.3689 128.785 14.8681 127.387 14.8681C126.189 14.8681 124.941 14.319 123.643 13.2206C123.443 13.1207 122.994 12.8711 122.295 12.4717C121.696 12.0723 121.047 11.8725 120.348 11.8725ZM100.277 55.159C104.072 55.159 107.117 53.2618 109.414 49.4673C111.81 45.6729 113.009 40.7801 113.009 34.7889C113.009 28.7977 111.81 23.9049 109.414 20.1105C107.117 16.316 104.072 14.4188 100.277 14.4188C96.4829 14.4188 93.3874 16.316 90.9909 20.1105C88.6943 23.9049 87.546 28.7977 87.546 34.7889C87.546 40.7801 88.6943 45.6729 90.9909 49.4673C93.3874 53.2618 96.4829 55.159 100.277 55.159ZM118.85 97.9961C118.85 94.2016 117.502 91.256 114.806 89.159C112.11 87.162 107.017 85.4145 99.5284 83.9167C95.3346 83.2178 91.8896 82.3191 89.1936 81.2207C82.104 83.717 78.5592 88.8595 78.5592 96.648C78.5592 101.94 80.2567 106.034 83.6517 108.93C87.1466 111.826 92.0394 113.274 98.3302 113.274C104.621 113.274 109.614 111.876 113.308 109.08C117.003 106.384 118.85 102.689 118.85 97.9961Z"/>
+        <path d="M34.1364 12.9211C39.9279 12.9211 45.0704 14.319 49.5638 17.1149C54.0572 19.9108 57.5521 23.855 60.0484 28.9475C62.5447 33.9402 63.7929 39.6818 63.7929 46.1722C63.7929 52.6627 62.5447 58.4542 60.0484 63.5467C57.5521 68.5394 54.0572 72.4337 49.5638 75.2296C45.0704 78.0255 39.9279 79.4234 34.1364 79.4234C28.3449 79.4234 23.2025 78.0255 18.7091 75.2296C14.2157 72.4337 10.7208 68.5394 8.2245 63.5467C5.72816 58.4542 4.48 52.6627 4.48 46.1722C4.48 39.6818 5.72816 33.9402 8.2245 28.9475C10.7208 23.855 14.2157 19.9108 18.7091 17.1149C23.2025 14.319 28.3449 12.9211 34.1364 12.9211ZM15.5637 46.1722C15.5637 56.1576 17.2113 63.9461 20.5065 69.5379C23.8016 75.1297 28.3449 77.9256 34.1364 77.9256C39.9279 77.9256 44.4713 75.1297 47.7664 69.5379C51.0616 63.9461 52.7092 56.1576 52.7092 46.1722C52.7092 36.1869 51.0616 28.3984 47.7664 22.8066C44.4713 17.2148 39.9279 14.4189 34.1364 14.4189C28.3449 14.4189 23.8016 17.2148 20.5065 22.8066C17.2113 28.3984 15.5637 36.1869 15.5637 46.1722Z"/>
+      </svg>
+    </div>
+
+    <div fil-scroller-section="cards" fil-scroller-expose>
+      <div class="cards-grid">
+      {% for i in range(0, 6) -%}
+          <div class="cards-col">
+            {% for i in range(0, 6) -%}
+              <div class="cards-card"></div>
+            {%- endfor %}
+          </div>
+        {%- endfor %}
+        </div>
+    </div>
+
+    <div fil-scroller-section="fam">
+      <div class="img">
+        <img src="/assets/img/family.png">
+      </div>
+    </div>
+  </div>
+</div>
