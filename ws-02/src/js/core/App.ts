@@ -30,7 +30,7 @@ export class App implements NomadRouteListener {
 
 	initNomad() {
 		const nomad = new Nomad({
-			replace: true
+			replace: false
 		}, (id, template, dom) =>{
 			console.log(id, template)
 			if (template === 'about') return new AboutPage(id, template, dom)
